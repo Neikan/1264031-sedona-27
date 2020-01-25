@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <!-- Шапка сайта: навигация и логотип города -->
     <header>
-      <img src="https://via.placeholder.com/140x71" alt="Логотип города">
+      <a><img src="https://via.placeholder.com/140x71" alt="Логотип города" class="logo"></a>
       <!-- <img src="img//logos/index-logo.svg" width="140" height="71" alt="Логотип города"> // Подставить потом вместо заглушки -->
       <nav>
-        <ul>
+        <ul class="nav-list">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -21,34 +22,88 @@
 
      <!-- Основное содержимое -->
      <main>
-      <!-- Блок 1: Приветствие и интро -->
+      <!-- Блок 1: Приветствие и причины-преимущества -->
       <h1>Седона</h1>
       <section>
-        <h2>Преимущества</h2>
-        <h3>Седона - небольшой городок в Аризоне, заслуживающий большего!</h3>
+        <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
+        <ul class="reason-list">
+          <li>
+            <h2>Настоящий городок</h2>
+            <p>- №1 - </p>
+            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            <ul class="life-list">
+              <li>
+                <div class="icon-housing">
+                  <img src="https://via.placeholder.com/74x70" alt="Иконка жилья">
+                </div>
+                <h3>Жильё</h3>
+                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li>
+                <div class="icon-food">
+                  <img src="https://via.placeholder.com/74x70" alt="Иконка еды">
+                </div>
+                <h3>Еда</h3>
+                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li>
+                <div class="icon-gift">
+                  <img src="https://via.placeholder.com/74x70" alt="Иконка сувениров">
+                </div>
+                <h3>Сувениры</h3>
+                <p>Не только китайского, но и местного производства</p>
+              </li>
+            </ul>
+          <li class="blue-back">
+            <h2>Там есть мост дьявола</h2>
+            <p>- №2 -</p>
+            <p>
+              Да, по нему можно пройти! Если конечно вы осмелитесь
+            </p>
+          </li>
+          <li class="grey-back">
+            <h2>Небольшая площадь</h2>
+            <p>- №3 -</p>
+            <p>Все достопримечательности находятся очень близко
+            </p>
+          </li>
+          <li class="grey-back">
+            <h2>Красивая дорога</h2>
+           <p>- №4 - </p>
+           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li class="grey-back">
+            <h2>Мало туристов</h2>
+            <p>- №5 -</p>
+            <p>Большинство едет в Гранд каньон и толпится там</p>
+          </li>
+        </ul>
       </section>
 
-      <!-- Блок 2: Пять причин -->
-      <!-- <section>
-      </section>-->
-
-      <!-- Блок 3: Поиск гостиницы -->
-      <!-- <section>
-      </section>-->
+      <!-- Блок 2: Поиск гостиницы -->
+      <section>
+        <h2>Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <div class="brown-button">
+          <p>Поиск гостиницы в Седоне</p>
+        </div>
+        <!-- Форма поиска гостициы -->
+      </section>
     </main>
 
     <!-- "Подвал" -->
-    <footer>
+    <footer class="footer-back">
       <p>#VisitSedona</p>
+      <p>Звоните (800) 288-7336 или (928) 282-7722</p>
       <div>
-      <a href="https://twitter.com">Twitter</a>
-      <a href="https://www.facebook.com">Facebook</a>
-      <a href="https://www.youtube.com/watch?v=OrVSW1Oebd4&feature=emb_logo">Youtube</a>
+        <a href="https://twitter.com/SedonaAZ" class="tw-icon">Twitter</a>
+        <a href="https://www.facebook.com/VisitSedona" class="fb-icon">Facebook</a>
+        <a href="https://www.youtube.com/user/SedonaAZ1" class="youtube-icon">Youtube</a>
       </div>
       <p>Website by</p>
       <!-- <a href="https://htmlacademy.ru"><img src="img/logos/logo-htmla.png" alt="HTML Academy"></a> -->
-      <a href="https://htmlacademy.ru"><img src="https://via.placeholder.com/115x41" alt="Логотип города"></a>
+      <a href="https://htmlacademy.ru" class="logo-htmla"><img src="https://via.placeholder.com/115x41" alt="Логотип HTML Academy"></a>
     </footer>
   </body>
 </html>
