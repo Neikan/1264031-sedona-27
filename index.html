@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <!-- <link href="css/styles.css" rel="stylesheet"> -->
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <!-- Шапка сайта: навигация и логотип города -->
     <header>
-      <a><img src="https://via.placeholder.com/140x71" alt="Логотип города" class="logo"></a>
-      <!-- <img src="img//logos/index-logo.svg" width="140" height="71" alt="Логотип города"> // Подставить потом вместо заглушки -->
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+      <a class="header-logo-sedona"><img src="img/logos/logo-sedona.svg" width="140" height="71" alt="Логотип города"></a>
+      <nav class="header-navigation-background">
+        <ul class="header-navigation-list">
+          <li><a href="#" class="navigation-link">Информация</a></li>
+          <li><a href="#" class="navigation-link">Фото и видео</a></li>
+          <li><a href="#" class="navigation-link">Карта штата</a></li>
+          <li><a href="hotels.html" class="navigation-link">Гостиницы</a></li>
         </ul>
       </nav>
      </header>
@@ -27,53 +26,55 @@
       <section>
         <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
-        <ul class="reason-list">
-          <li>
+        <ul class="reason-feature-list">
+          <li class="">
             <h2>Настоящий городок</h2>
+            <span class="reason-feature-picture"><img src="img/content/features/feature-picture-1.jpg" alt="Город"></span>
             <p>– №1 –</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-            <ul>
+            <ul class="reason-feature-list">
               <li>
-                <div class="icon-housing">
-                  <img src="https://via.placeholder.com/74x70" alt="Иконка жилья">
+                <div class="reason-icon-housing">
+                  <img src="img/icons/housing.svg" alt="Иконка жилья">
                 </div>
                 <h3>Жильё</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li>
-                <div class="icon-food">
-                  <img src="https://via.placeholder.com/74x70" alt="Иконка еды">
+                <div class="reason-icon-food">
+                  <img src="img/icons/food.svg" alt="Иконка еды">
                 </div>
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li>
-                <div class="icon-gift">
-                  <img src="https://via.placeholder.com/74x70" alt="Иконка сувениров">
+                <div class="reason-icon-gift">
+                  <img src="img/icons/gift.svg" alt="Иконка сувениров">
                 </div>
                 <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного производства</p>
               </li>
             </ul>
-          <li class="blue-back">
+          <li class="reason-background-blue">
             <h2>Там есть мост дьявола</h2>
+            <span class="reason-feature-picture"><img src="img/content/features/feature-picture-2.jpg" alt="Мост дьявола"></span>
             <p>– №2 –</p>
             <p>
               Да, по нему можно пройти! Если конечно вы осмелитесь
             </p>
           </li>
-          <li class="grey-back">
+          <li class="reason-background-grey">
             <h2>Небольшая площадь</h2>
             <p>– №3 –</p>
             <p>Все достопримечательности находятся очень близко
             </p>
           </li>
-          <li class="grey-back">
+          <li class="reason-background-grey">
             <h2>Красивая дорога</h2>
            <p>– №4 –</p>
            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="grey-back">
+          <li class="reason-background-grey">
             <h2>Мало туристов</h2>
             <p>– №5 –</p>
             <p>Большинство едет в Гранд каньон и толпится там</p>
@@ -85,27 +86,40 @@
       <section>
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <div class="brown-button">
+        <div class="search-button-brown">
           <p>Поиск гостиницы в Седоне</p>
         </div>
         <!-- Форма поиска гостициы -->
       </section>
+
+      <section class="map">
+        <h2">Карта</h2>
+        <a href="#" class="map-link" >
+          <img class="map-picture"src="img/content/map/map.jpg" width="1200" height="593" alt="Карта">
+        </a>
+      </section>
+
     </main>
 
     <!-- "Подвал" -->
-    <footer class="footer-back">
+    <footer class="footer-background">
       <div>
         <p>#VisitSedona</p>
         <p>Тел: +7(495) 666-02-66</p>
       </div>
-      <div>
-        <a href="https://twitter.com/SedonaAZ" class="tw-icon">Twitter</a>
-        <a href="https://www.facebook.com/VisitSedona" class="fb-icon">Facebook</a>
-        <a href="https://www.youtube.com/user/SedonaAZ1" class="youtube-icon">Youtube</a>
-      </div>
+      <span class="footer-icon-block">
+        <a href="https://twitter.com/SedonaAZ" class="footer-icon-social">
+          <img src="img/icons/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social">
+          <img src="img/icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" >
+          <img src="img/icons/youtube.svg" alt="Youtube">
+        </a>
+      </span>
       <p>Website by</p>
-      <!-- <a href="https://htmlacademy.ru"><img src="img/logos/logo-htmla.png" alt="HTML Academy"></a> -->
-      <a href="https://htmlacademy.ru" class="logo-htmla"><img src="https://via.placeholder.com/115x41" alt="Логотип HTML Academy"></a>
+      <a href="https://htmlacademy.ru" class="footer-logo-htmla"><img src="img/logos/logo-htmla.svg" alt="HTML Academy" width="115" height="41"></a>
     </footer>
   </body>
 </html>

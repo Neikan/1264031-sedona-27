@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <!-- <link href="css/styles.css" rel="stylesheet"> -->
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <!-- "Шапка сайта": навигация и логотип города -->
     <header>
-      <a href="index.html"> <img src="https://via.placeholder.com/140x71" alt="Логотип города" class="logo"></a>
-      <!-- <img src="img/logos/index-logo.svg" width="140" height="71" alt="Логотип города"> // Подставить потом вместо заглушки -->
-      <nav class="nav-back">
-        <ul class="nav-list">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a>Гостиницы</a></li>
+      <a href="index.html" class="header-logo-sedona"><img src="img/logos/logo-sedona.svg" width="140" height="71" alt="Логотип города"></a>
+      <nav class="header-navigation-background">
+        <ul class="header-navigation-list">
+          <li><a href="#" class="navigation-link">Информация</a></li>
+          <li><a href="#" class="navigation-link">Фото и видео</a></li>
+          <li><a href="#" class="navigation-link">Карта штата</a></li>
+          <li><a class="navigation-link">Гостиницы</a></li>
         </ul>
       </nav>
      </header>
@@ -29,8 +28,7 @@
       <section>
         <h2>Гостиницы</h2>
         <div>
-          <p>Найдено:</p>
-          <p>3</p>
+          <p>Найдено: 3</p>
         </div>
         <p>Сортировка:</p>
         <div>
@@ -39,15 +37,15 @@
           <a href="#">По рейтингу</a>
         </div>
         <div>
-          <a href="#">По возрастанию</a>
-          <a href="#">По убыванию</a>
+          <a href="#" class="icon-sort-result"><img src="img/icons/up-dir.svg" alt="По возрастанию"></a>
+          <a href="#" class="icon-sort-result"><img src="img/icons/down-dir.svg" alt="По убыванию"></a>
         </div>
       </section>
 
       <section>
-        <ul class="result-hotel-list">
+        <ul class="hotel-result-list">
           <li>
-            <img src="https://via.placeholder.com/135x90" alt="Amara Resort & Spa">
+            <img src="img/content/hotels/amara-resort-spa.jpg" alt="Amara Resort & Spa">
             <h3>Amara Resort & Spa</h3>
             <p>Гостиница</p>
             <p>От 4000 р.</p>
@@ -57,7 +55,7 @@
             <span>Рейтинг: 8,5</span>
           </li>
           <li>
-            <img src="https://via.placeholder.com/135x90" alt="Desert Quail Inn">
+            <img src="img/content/hotels/desert-quail-inn.jpg" alt="Desert Quail Inn">
             <h3>Desert Quail Inn</h3>
             <p>Мотель</p>
             <p>От 3000 р.</p>
@@ -67,7 +65,7 @@
             <span>Рейтинг: 8,9</span>
           </li>
           <li>
-            <img src="https://via.placeholder.com/135x90" alt="Villas at Poco Diablo">
+            <img src="img/content/hotels/villas-at-poco-diablo.jpg" alt="Villas at Poco Diablo">
             <h3>Villas at Poco Diablo</h3>
             <p>Апартаменты</p>
             <p>От 2000 р.</p>
@@ -81,19 +79,24 @@
     </main>
 
     <!-- "Подвал" -->
-    <footer class="footer-back">
+    <footer class="footer-background">
       <div>
         <p>#VisitSedona</p>
         <p>Тел: +7(495) 666-02-66</p>
       </div>
-      <div>
-        <a href="https://twitter.com/SedonaAZ" class="tw-icon">Twitter</a>
-        <a href="https://www.facebook.com/VisitSedona" class="fb-icon">Facebook</a>
-        <a href="https://www.youtube.com/user/SedonaAZ1" class="youtube-icon">Youtube</a>
-      </div>
+      <span class="footer-icon-block">
+        <a href="https://twitter.com/SedonaAZ" class="footer-icon-social">
+          <img src="img/icons/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social">
+          <img src="img/icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" >
+          <img src="img/icons/youtube.svg" alt="Youtube">
+        </a>
+      </span>
       <p>Website by</p>
-      <!-- <a href="https://htmlacademy.ru"><img src="img/logos/logo-htmla.png" alt="HTML Academy"></a> -->
-      <a href="https://htmlacademy.ru" class="logo-htmla"><img src="https://via.placeholder.com/115x41" alt="Логотип HTML Academy"></a>
+      <a href="https://htmlacademy.ru" class="footer-logo-htmla"><img src="img/logos/logo-htmla.svg" alt="HTML Academy" width="115" height="41"></a>
     </footer>
   </body>
 </html>
