@@ -36,6 +36,12 @@
 
 } */
 
+.test-background {
+  width: 459px;
+  height: 353px;
+  background-color: #eeeeee;
+}
+
 .reason-background-blue {
   width: 400px;
   height: 256px;
