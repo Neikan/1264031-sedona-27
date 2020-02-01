@@ -1,3 +1,9 @@
+.visually-hidden {
+  visibility: hidden;
+  /* position: absolute;
+  clip: rect(0 0 0 0); */
+}
+
 .header-logo-sedona {
   width: 140px;
   height: 71px;
@@ -35,6 +41,20 @@
 .reason-icon-gift {
 
 } */
+
+.filter-list{
+  list-style-type: none;
+}
+
+
+
+/* Слайдер с друмя точками */
+
+/* .cost-range-slider {
+
+} */
+
+/* Заканчиваются стили слайдера */
 
 .test-background {
   width: 459px;

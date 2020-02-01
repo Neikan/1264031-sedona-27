@@ -22,7 +22,7 @@
      <!-- Основное содержимое -->
      <main>
       <!-- Блок 1: Приветствие и причины-преимущества -->
-      <h1>Седона</h1>
+      <h1 class="visually-hidden">Седона</h1>
       <div class="test-background">
         <img src="img/welcome/intro-welcome.svg" alt="Приветствие">
       </div>
@@ -86,13 +86,31 @@
         <div class="search-button-brown">
           <p>Поиск гостиницы в Седоне</p>
         </div>
-        <!-- Форма поиска гостициы -->
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div>
+            <label for="date-arrival">Дата заезда:</label>
+            <input id="date-arrival" type="text" name="date" value="" placeholder="24 апреля 2017">
+          </div>
+          <div>
+            <label for="date-departure">Дата выезда:</label>
+            <input id="date-departure" type="text" name="date" value="" placeholder="4 июля 2017">
+          </div>
+          <div>
+            <label for="adult">Взрослые:</label>
+            <input id="adult" type="text" name="adult" value="" placeholder="2">
+          </div>
+          <div>
+            <label for="children">Дети:</label>
+            <input id="children" type="text" name="children" value="" placeholder="0">
+          </div>
+          <button class="search-button-blue" type="submit">Найти</button>
+        </form>
       </section>
 
       <section class="map">
-        <h2>Карта</h2>
+        <h2 class="visually-hidden">Карта</h2>
         <a href="#" class="map-link" >
-          <img class="map-picture" src="img/content/map/map.jpg" width="1200" height="593" alt="Карта">
+          <img class="map-picture" src="img/content/map/map.jpg" width="1200" height="593" alt="США, Штат	Аризона, Графство	Явапай">
         </a>
       </section>
 
@@ -105,12 +123,12 @@
         <p>Тел: +7(495) 666-02-66</p>
       </div>
       <span class="footer-icon-block">
-        <a href="https://twitter.com/SedonaAZ" class="footer-icon-social">Twitter</a>
-        <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social">Facebook</a>
-        <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" >Youtube</a>
+        <a href="https://twitter.com/SedonaAZ" class="footer-icon-social" title="Twitter">Twitter</a>
+        <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social" title="Facebook">Facebook</a>
+        <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" title="Youtube">Youtube</a>
       </span>
       <p>Website by</p>
-      <a href="https://htmlacademy.ru" class="footer-logo-htmla">HTML Academy</a>
+      <a href="https://htmlacademy.ru" class="footer-logo-htmla" title="HTML Academy">HTML Academy</a>
     </footer>
   </body>
 </html>
