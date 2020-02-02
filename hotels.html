@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
@@ -92,42 +93,42 @@
           <a href="#">По рейтингу</a>
         </div>
         <div>
-          <a href="#" class="icon-sort-result" title="По возрастанию">По возрастанию</a>
-          <a href="#" class="icon-sort-result" title="По убыванию" >По убыванию</a>
+          <a href="#" class="icon-sort-result" aria-label="Сортировка по возрастанию" title="По возрастанию"></a>
+          <a href="#" class="icon-sort-result" aria-label="Сортировка по убыванию" title="По убыванию" ></a>
         </div>
       </section>
 
       <section>
         <ul class="hotel-result-list">
           <li>
-            <img src="img/content/hotels/amara-resort-spa.jpg" alt="Amara Resort & Spa">
+            <img src="img/content/hotels/amara-resort-spa.jpg" width="135" height="90" alt="Amara Resort & Spa">
             <h3>Amara Resort & Spa</h3>
             <p>Гостиница</p>
             <p>От 4000 р.</p>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
-            <span>4 звезды</span>
-            <span>Рейтинг: 8,5</span>
+            <a href="#" class="hotel-result-details">Подробнее</a>
+            <a href="#" class="hotel-result-reservation">Забронировать</a>
+            <span class="visually-hidden">4 звезды</span>
+            <span class="hotel-result-ratio">Рейтинг: 8,5</span>
           </li>
           <li>
-            <img src="img/content/hotels/desert-quail-inn.jpg" alt="Desert Quail Inn">
+            <img src="img/content/hotels/desert-quail-inn.jpg" width="135" height="90" alt="Desert Quail Inn">
             <h3>Desert Quail Inn</h3>
             <p>Мотель</p>
             <p>От 3000 р.</p>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
-            <span>3 звезды</span>
-            <span>Рейтинг: 8,9</span>
+            <a href="#" class="hotel-result-details">Подробнее</a>
+            <a href="#" class="hotel-result-reservation">Забронировать</a>
+            <span class="visually-hidden">3 звезды</span>
+            <span class="hotel-result-ratio">Рейтинг: 8,9</span>
           </li>
           <li>
-            <img src="img/content/hotels/villas-at-poco-diablo.jpg" alt="Villas at Poco Diablo">
+            <img src="img/content/hotels/villas-at-poco-diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             <h3>Villas at Poco Diablo</h3>
             <p>Апартаменты</p>
             <p>От 2000 р.</p>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
-            <span>2 звезды</span>
-            <span>Рейтинг: 9,2</span>
+            <a href="#" class="hotel-result-details">Подробнее</a>
+            <a href="#" class="hotel-result-reservation">Забронировать</a>
+            <span class="visually-hidden">2 звезды</span>
+            <span class="hotel-result-ratio">Рейтинг: 9,2</span>
           </li>
         </ul>
       </section>
@@ -137,17 +138,15 @@
     <footer class="footer-background">
       <div>
         <p>#VisitSedona</p>
-        <p>Тел: +7(495) 666-02-66</p>
+        <a href="tel:+74956660266">+7(495) 666-02-66</a>
       </div>
       <span class="footer-icon-block">
-        <a href="https://twitter.com/SedonaAZ" class="footer-icon-social" title="Twitter">Twitter</a>
-        <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social" title="Facebook">Facebook</a>
-        <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" title="Youtube">Youtube</a>
+        <a href="https://twitter.com/SedonaAZ" class="footer-icon-social" aria-label="Twitter"></a>
+        <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social" aria-label="Facebook"></a>
+        <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" aria-label="Youtube"></a>
       </span>
       <p>Website by</p>
-      <a href="https://htmlacademy.ru" class="footer-logo-htmla" title="HTML Academy">HTML Academy</a>
+      <a href="https://htmlacademy.ru" class="footer-logo-htmla" aria-label="HTML Academy">HTML Academy</a>
     </footer>
-
-    <!-- <script src="js/slider.js"></script> -->
   </body>
 </html>

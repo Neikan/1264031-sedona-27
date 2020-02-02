@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
@@ -24,7 +25,7 @@
       <!-- Блок 1: Приветствие и причины-преимущества -->
       <h1 class="visually-hidden">Седона</h1>
       <div class="test-background">
-        <img src="img/welcome/intro-welcome.svg" alt="Приветствие">
+        <img src="img/welcome/intro-welcome.svg" width="459" height="353" alt="Приветствие">
       </div>
       <section>
         <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -32,29 +33,26 @@
         <ul class="reason-feature-list">
           <li class="">
             <h2>Настоящий городок</h2>
-            <span class="reason-feature-picture"><img src="img/content/features/feature-picture-1.jpg" alt="Город"></span>
+            <span class="reason-feature-picture"><img src="img/content/features/feature-picture-1.jpg" width="800" height="256" alt="Фото настоящего городка"></span>
             <p>– №1 –</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
             <ul class="reason-feature-list">
-              <li>
-                <div class="reason-icon-housing">Иконка жилья</div>
+              <li class="reason-icon-housing">
                 <h3>Жильё</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li>
-                <div class="reason-icon-food">Иконка еды</div>
+              <li class="reason-icon-food">
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li>
-                <div class="reason-icon-gift">Иконка сувениров</div>
+              <li class="reason-icon-gift">
                 <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного производства</p>
               </li>
             </ul>
           <li class="reason-background-blue">
             <h2>Там есть мост дьявола</h2>
-            <span class="reason-feature-picture"><img src="img/content/features/feature-picture-2.jpg" alt="Мост дьявола"></span>
+            <span class="reason-feature-picture"><img src="img/content/features/feature-picture-2.jpg" width="800" height="256" alt="Мост дьявола"></span>
             <p>– №2 –</p>
             <p>
               Да, по нему можно пройти! Если конечно вы осмелитесь
@@ -83,25 +81,29 @@
       <section>
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <div class="search-button-brown">
-          <p>Поиск гостиницы в Седоне</p>
-        </div>
+        <button class="search-button-brown" type="button">Поиск гостиницы в Седоне</button>
         <form action="https://echo.htmlacademy.ru" method="post">
           <div>
             <label for="date-arrival">Дата заезда:</label>
-            <input id="date-arrival" type="text" name="date" value="" placeholder="24 апреля 2017">
+            <input id="date-arrival" type="text" name="date-arrival" value="" placeholder="24 апреля 2017">
+            <button class="search-button-calendar" type="button"></button>
           </div>
           <div>
             <label for="date-departure">Дата выезда:</label>
-            <input id="date-departure" type="text" name="date" value="" placeholder="4 июля 2017">
+            <input id="date-departure" type="text" name="date-departure" value="" placeholder="4 июля 2017">
+            <button class="search-button-calendar" type="button"></button>
           </div>
           <div>
             <label for="adult">Взрослые:</label>
+            <button class="search-button-minus" type="button"></button>
             <input id="adult" type="text" name="adult" value="" placeholder="2">
+            <button class="search-button-plus" type="button"></button>
           </div>
           <div>
             <label for="children">Дети:</label>
+            <button class="search-button-minus" type="button"></button>
             <input id="children" type="text" name="children" value="" placeholder="0">
+            <button class="search-button-plus" type="button"></button>
           </div>
           <button class="search-button-blue" type="submit">Найти</button>
         </form>
@@ -109,9 +111,10 @@
 
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <a href="#" class="map-link" >
-          <img class="map-picture" src="img/content/map/map.jpg" width="1200" height="593" alt="США, Штат	Аризона, Графство	Явапай">
+        <a href="#" class="map-link">
+          <img class="map-picture" src="img/content/map/map.jpg" width="1200" height="593" alt="Седона находится в США, Штат Аризона, Графство Явапай">
         </a>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1187671.550791491!2d-112.2405731685664!3d34.69230973610526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1580642350026!5m2!1sru!2sru" width="1200" height="593" style="border:0;" allowfullscreen=""></iframe> -->
       </section>
 
     </main>
@@ -120,15 +123,17 @@
     <footer class="footer-background">
       <div>
         <p>#VisitSedona</p>
-        <p>Тел: +7(495) 666-02-66</p>
+        <a href="tel:+74956660266">+7(495) 666-02-66</a>
       </div>
       <span class="footer-icon-block">
-        <a href="https://twitter.com/SedonaAZ" class="footer-icon-social" title="Twitter">Twitter</a>
-        <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social" title="Facebook">Facebook</a>
-        <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" title="Youtube">Youtube</a>
+        <a href="https://twitter.com/SedonaAZ" class="footer-icon-social" aria-label="Twitter"></a>
+        <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social" aria-label="Facebook"></a>
+        <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" aria-label="Youtube"></a>
       </span>
       <p>Website by</p>
-      <a href="https://htmlacademy.ru" class="footer-logo-htmla" title="HTML Academy">HTML Academy</a>
+      <a href="https://htmlacademy.ru" class="footer-logo-htmla" aria-label="HTML Academy">HTML Academy</a>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
