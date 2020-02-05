@@ -2,20 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <!-- Шапка сайта: навигация и логотип города -->
     <header>
-      <a class="header-logo-sedona"><img src="img/logos/logo-sedona.svg" width="140" height="71" alt="Логотип города"></a>
-      <nav class="header-navigation-background">
-        <ul class="header-navigation-list">
-          <li><a href="#" class="navigation-link">Информация</a></li>
-          <li><a href="#" class="navigation-link">Фото и видео</a></li>
-          <li><a href="#" class="navigation-link">Карта штата</a></li>
-          <li><a href="hotels.html" class="navigation-link">Гостиницы</a></li>
+      <nav class="header-nav">
+        <a class="header-logo"><img src="img/logos/logo-sedona.svg" width="140" height="71" alt="Логотип города"></a>
+        <ul class="header-nav-list">
+          <li class="header-nav-item"><a href="#" class="header-nav-link">Информация</a></li>
+          <li class="header-nav-item"><a href="#" class="header-nav-link">Фото и видео</a></li>
+          <li class="header-nav-item"><a href="#" class="header-nav-link">Карта штата</a></li>
+          <li class="header-nav-item"><a href="hotels.html" class="header-nav-link">Гостиницы</a></li>
         </ul>
       </nav>
      </header>
@@ -24,52 +25,54 @@
      <main>
       <!-- Блок 1: Приветствие и причины-преимущества -->
       <h1 class="visually-hidden">Седона</h1>
-      <div class="test-background">
+      <div class="welcome-banner">
         <img src="img/welcome/intro-welcome.svg" width="459" height="353" alt="Приветствие">
       </div>
       <section>
-        <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
-        <ul class="reason-feature-list">
-          <li class="reason-background-blue">
+        <div class="welcome-block">
+          <h2>Седона – небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
+        </div>
+        <ul class="reason-list">
+          <li class="reason-item">
             <h2>Настоящий городок</h2>
-            <span class="reason-feature-picture"><img src="img/content/features/feature-picture-1.jpg" width="800" height="256" alt="Фото настоящего городка"></span>
             <p>– №1 –</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            <span class="reason-picture"><img src="img/content/features/feature-picture-1.jpg" width="800" height="256" alt="Фото настоящего городка"></span>
             <ul class="reason-feature-list">
-              <li class="reason-icon-housing">
+              <li class="reason-feature-item reason-housing-icon">
                 <h3>Жильё</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li class="reason-icon-food">
+              <li class="reason-feature-item reason-food-icon">
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li class="reason-icon-gift">
+              <li class="reason-feature-item reason-gift-icon">
                 <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного производства</p>
               </li>
             </ul>
-          <li class="reason-background-blue">
-            <h2>Там есть мост дьявола</h2>
+          <li class="reason-item">
             <span class="reason-feature-picture"><img src="img/content/features/feature-picture-2.jpg" width="800" height="256" alt="Мост дьявола"></span>
+            <h2>Там есть мост дьявола</h2>
             <p>– №2 –</p>
             <p>
               Да, по нему можно пройти! Если конечно вы осмелитесь
             </p>
           </li>
-          <li class="reason-background-grey">
+          <li class="reason-item">
             <h2>Небольшая площадь</h2>
             <p>– №3 –</p>
             <p>Все достопримечательности находятся очень близко
             </p>
           </li>
-          <li class="reason-background-grey">
+          <li class="reason-item">
             <h2>Красивая дорога</h2>
-           <p>– №4 –</p>
-           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p>– №4 –</p>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="reason-background-grey">
+          <li class="reason-item">
             <h2>Мало туристов</h2>
             <p>– №5 –</p>
             <p>Большинство едет в Гранд каньон и толпится там</p>
@@ -79,33 +82,35 @@
 
       <!-- Блок 2: Поиск гостиницы -->
       <section>
-        <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="search-button-brown" type="button">Поиск гостиницы в Седоне</button>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="search-preconditions">
+          <h2>Заинтересовались?</h2>
+          <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        </div>
+        <button class="search-form-button" type="button">Поиск гостиницы в Седоне</button>
+        <form class="search-form-back" action="https://echo.htmlacademy.ru" method="post">
           <div>
-            <label for="date-arrival">Дата заезда:</label>
-            <input id="date-arrival" type="text" name="date-arrival" value="" placeholder="24 апреля 2017">
+            <label class="search-form-label" for="date-arrival">Дата заезда:</label>
+            <input class="search-form-date" id="date-arrival" type="text" name="date-arrival" value="" placeholder="24 апреля 2017">
             <button class="search-button-calendar" type="button" aria-label="Выбрать дату заезда"></button>
           </div>
           <div>
-            <label for="date-departure">Дата выезда:</label>
-            <input id="date-departure" type="text" name="date-departure" value="" placeholder="4 июля 2017">
+            <label class="search-form-label" for="date-departure">Дата выезда:</label>
+            <input class="search-form-date" id="date-departure" type="text" name="date-departure" value="" placeholder="4 июля 2017">
             <button class="search-button-calendar" type="button" aria-label="Выбрать дату отъезда"></button>
           </div>
           <div>
-            <label for="adult">Взрослые:</label>
+            <label class="search-form-label" for="adult">Взрослые:</label>
             <button class="search-button-minus" type="button" aria-label="Уменьшить количество"></button>
-            <input id="adult" type="text" name="adult" value="" placeholder="2">
+            <input class="search-form-guests" id="adult" type="text" name="adult" value="" placeholder="2">
             <button class="search-button-plus" type="button" aria-label="Увеличить количество"></button>
           </div>
           <div>
-            <label for="children">Дети:</label>
+            <label class="search-form-label" for="children">Дети:</label>
             <button class="search-button-minus" type="button" aria-label="Уменьшить количество"></button>
-            <input id="children" type="text" name="children" value="" placeholder="0">
+            <input class="search-form-guests" id="children" type="text" name="children" value="" placeholder="0">
             <button class="search-button-plus" type="button" aria-label="Увеличить количество"></button>
           </div>
-          <button class="search-button-blue" type="submit">Найти</button>
+          <button class="search-button" type="submit">Найти</button>
         </form>
       </section>
 
@@ -120,18 +125,18 @@
     </main>
 
     <!-- "Подвал" -->
-    <footer class="footer-background">
+    <footer class="footer-back">
       <div>
-        <p>#VisitSedona</p>
-        <a href="tel:+74956660266">+7(495) 666-02-66</a>
+        <p class="footer-hashtag">#VisitSedona</p>
+        <a class="footer-phone" href="tel:+74956660266">Тел: +7(495) 666-02-66</a>
       </div>
       <span class="footer-icon-block">
         <a href="https://twitter.com/SedonaAZ" class="footer-icon-social" aria-label="Twitter" title="Twitter"></a>
         <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social" aria-label="Facebook" title="Facebook"></a>
         <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" aria-label="Youtube" title="Youtube"></a>
       </span>
-      <p>Website by</p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo-htmla" aria-label="HTML Academy">HTML Academy</a>
+      <p class="footer-by-text">Website by</p>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-by-logo" aria-label="HTML Academy">здесь будет лого</a>
     </footer>
 
     <script src="js/main.js"></script>
