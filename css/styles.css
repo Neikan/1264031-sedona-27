@@ -31,6 +31,17 @@ body {
   left: 569px;
 }
 
+/* Не нашел, как должен вести себя логотип при выделении/клике. Пока сделал так */
+.header-logo:hover,
+.header-logo:focus {
+  opacity: 0.8;
+  outline: none;
+}
+
+.header-logo:active {
+  opacity: 0.5;
+}
+
 /* Навигация */
 .header-nav {
   height: 56px;
@@ -60,6 +71,7 @@ body {
 .header-nav-item a:hover,
 .header-nav-item a:focus {
     color: #81b3d2;
+    outline: none;
 }
 
 .header-nav-item a:active {
@@ -214,6 +226,7 @@ body {
 .search-form-button:hover,
 .search-form-button:focus {
   background-color: #604e43;
+  outline: none;
 }
 
 .search-form-button:active {
@@ -254,6 +267,7 @@ body {
 .search-form-date:hover,
 .search-form-date:focus {
   background-color: #ebebeb;
+  outline: none;
 }
 
 .search-form-date:active {
@@ -277,6 +291,7 @@ body {
 .search-form-guests:hover,
 .search-form-guests:focus {
   background-color: #ebebeb;
+  outline: none;
 }
 
 .search-form-guests:active {
@@ -299,6 +314,7 @@ body {
 .search-button-calendar:hover,
 .search-button-calendar:focus {
   fill: #000000;
+  outline: none;
 }
 
 .search-button-calendar:active {
@@ -316,6 +332,7 @@ body {
 .search-button-plus:hover,
 .search-button-plus:focus {
   fill: #000000;
+  outline: none;
 }
 
 .search-button-plus:active {
@@ -333,6 +350,7 @@ body {
 .search-button-minus:hover,
 .search-button-minus:focus {
   fill: #000000;
+  outline: none;
 }
 
 .search-button-minus:active {
@@ -357,6 +375,7 @@ body {
 .search-button:hover,
 .search-button:focus {
   background-color: #669ec0;
+  outline: none;
 }
 
 .search-button:active {
@@ -391,6 +410,51 @@ body {
 
 /* Заканчиваются стили слайдера */
 
+.hotel-result {
+  background-color: #ffffff;
+}
+
+.hotel-result-count {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: left;
+  color: #000000;
+}
+
+.hotel-result-sort {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  color: #000000;
+}
+
+.hotel-result-link {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.hotel-result-link:hover {
+  color: #81b3d2;
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.hotel-result-link:focus {
+  color: #81b3d2;
+  border-bottom: none;
+  outline: none;
+}
+
+.hotel-result-link:active {
+  color: #000000;
+  border-bottom: none;
+}
+
 /* Гостиницы */
 .hotel-list {
   list-style-type: none;
@@ -417,6 +481,7 @@ body {
 .hotel-title:hover,
 .hotel-title:focus {
   color: #81b3d2;
+  outline: none;
 }
 
 .hotel-title:active {
@@ -441,6 +506,7 @@ body {
 .hotel-details:hover,
 .hotel-details:focus {
   background-color: #669ec0;
+  outline: none;
 }
 
 .hotel-details:active {
@@ -466,6 +532,7 @@ body {
 .hotel-reservation:hover,
 .hotel-reservation:focus {
   background-color: #604e43;
+  outline: none;
 }
 
 .hotel-reservation:active {
@@ -513,6 +580,17 @@ body {
   text-decoration: none;
 }
 
+/* Не нашел, как должен вести себя телефон при выделении/клике. Пока сделал по аналогии с названием-ссылкой гостиницы */
+.footer-phone:hover,
+.footer-phone:focus {
+  color: #81b3d2;
+  outline: none;
+}
+
+.footer-phone:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 /* Блок иконок соц. сетей */
  /* .footer-icon-block {
 
@@ -531,6 +609,7 @@ body {
 .footer-icon-social:hover,
 .footer-icon-social:focus {
   background-color: #669ec0;
+  outline: none;
 }
 
 .footer-icon-social:active {
@@ -553,6 +632,7 @@ body {
 .footer-by-logo:hover,
 .footer-by-logo:focus {
   fill: #81b3d2;
+  outline: none;
 }
 
 .footer-by-logo:active {
