@@ -25,10 +25,10 @@
      <main>
       <!-- Блок 1: Параметры гостиницы -->
       <section>
-        <h2 class="visual-hidden">Фильтрация гостиниц</h2>
+        <h2 class="visually-hidden">Фильтрация гостиниц</h2>
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
-            <legend>Инфраструктура:</legend>
+            <legend class="filter-legend">Инфраструктура:</legend>
             <ul class="filter-list">
               <li>
                 <input  type="checkbox" name="pool" id="filter-infra-pool" checked>
@@ -45,7 +45,7 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Тип жилья:</legend>
+            <legend class="filter-legend">Тип жилья:</legend>
             <ul class="filter-list">
               <li>
                 <input type="checkbox" name="hotel" id="filter-type-hotel" checked>
@@ -62,21 +62,21 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Стоимость в сутки (р):</legend>
+            <legend class="filter-legend">Стоимость в сутки (р):</legend>
             <div>
               <div>
-                <label for="from">От</label>
+                <label class="filter-legend-label" for="from">От</label>
                 <input id="from" type="text" name="cost-min" placeholder="0">
               </div>
               <div>
-                <label for="to">До</label>
+                <label class="filter-legend-label" for="to">До</label>
                 <input id="to" type="text" name="cost-max" placeholder="3000">
               </div>
               <!-- <div> Здесь будет слайдер
                 <input id="cost-range" type="range" class="cost-range-slider" min="0" max="3000" step="1" value="2500">
               </div> -->
             </div>
-            <button type="submit">Показать</button>
+            <button class="filter-button" type="submit">Показать</button>
           </fieldset>
         </form>
       </section>
