@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -16,7 +16,7 @@
           <li class="header-nav-item"><a href="#" class="header-nav-link">Информация</a></li>
           <li class="header-nav-item"><a href="#" class="header-nav-link">Фото и видео</a></li>
           <li class="header-nav-item"><a href="#" class="header-nav-link">Карта штата</a></li>
-          <li class="header-nav-item"><a class="header-nav-link">Гостиницы</a></li>
+          <li class="header-nav-item"><a class="header-nav-link current">Гостиницы</a></li>
         </ul>
       </nav>
      </header>
@@ -24,7 +24,7 @@
      <!-- Основное содержимое -->
      <main>
       <!-- Блок 1: Параметры гостиницы -->
-      <section>
+      <section class="filter-back">
         <h2 class="visually-hidden">Фильтрация гостиниц</h2>
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
@@ -66,11 +66,11 @@
             <div>
               <div>
                 <label class="filter-legend-label" for="from">От</label>
-                <input id="from" type="text" name="cost-min" placeholder="0">
+                <input class="filter-input" id="from" type="text" name="cost-min" placeholder="0">
               </div>
               <div>
                 <label class="filter-legend-label" for="to">До</label>
-                <input id="to" type="text" name="cost-max" placeholder="3000">
+                <input class="filter-input" id="to" type="text" name="cost-max" placeholder="3000">
               </div>
               <!-- <div> Здесь будет слайдер
                 <input id="cost-range" type="range" class="cost-range-slider" min="0" max="3000" step="1" value="2500">
@@ -89,7 +89,7 @@
         </div>
         <p class="hotel-result-sort">Сортировка:</p>
         <div>
-          <a href="#" class="hotel-result-link">По цене</a>
+          <a href="#" class="hotel-result-link current">По цене</a>
           <a href="#" class="hotel-result-link">По типу</a>
           <a href="#" class="hotel-result-link">По рейтингу</a>
         </div>

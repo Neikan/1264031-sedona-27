@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  width: 1280px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -60,7 +59,7 @@ body {
   vertical-align: middle;
 }
 
-.header-nav-item a {
+.header-nav-link {
   display: block;
   line-height: 26px;
   font-weight: bold;
@@ -68,14 +67,20 @@ body {
   text-decoration: none;
 }
 
-.header-nav-item a:hover,
-.header-nav-item a:focus {
+.header-nav-link:hover,
+.header-nav-link:focus {
     color: #81b3d2;
     outline: none;
 }
 
-.header-nav-item a:active {
+.header-nav-link:active {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.header-nav-link.current,
+.header-nav-link.current:hover,
+.header-nav-link.current:active {
+  color: #766357;
 }
 
 /* Приветствие */
@@ -117,6 +122,7 @@ body {
   list-style: none;
 }
 
+/* возможно потом удалить совсем данный класс, как излишний. посмотреть ближе к концу*/
 .reason-item {
   text-align: center;
 }
@@ -127,15 +133,12 @@ body {
   line-height: 21px;
 }
 
-.reason-item:nth-child(1),
-.reason-item:nth-child(2) {
+.reason-item-blue {
   color: #ffffff;
   background-color: #81b3d2;
 }
 
-.reason-item:nth-child(3),
-.reason-item:nth-child(4),
-.reason-item:nth-child(5) {
+.reason-item-grey {
   display: inline-block;
   width: 400px;
   height: 256px;
@@ -274,6 +277,10 @@ body {
   background-color: #ffffff
 }
 
+.search-form-date::placeholder {
+  color: #000000;
+  text-transform: uppercase;
+}
 
 /* Поля ввода количества гостей */
 .search-form-guests {
@@ -296,6 +303,10 @@ body {
 
 .search-form-guests:active {
   background-color: #ffffff
+}
+
+.search-form-guests::placeholder {
+  color: #000000;
 }
 
 
@@ -397,6 +408,10 @@ body {
 }
 */
 
+.filter-back {
+  background-color: #81b3d2;
+}
+
 .filter-legend {
   font-size: 16px;
   font-weight: bold;
@@ -406,6 +421,22 @@ body {
 
 .filter-legend-label {
   font-size: 16px;
+  color: #ffffff;
+}
+
+.filter-input {
+  width: 157px;
+  height: 32px;
+
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+
+  border: none;
+  background-color: transparent;
+}
+
+.filter-input::placeholder {
   color: #ffffff;
 }
 
@@ -476,19 +507,20 @@ body {
   border-bottom: 1px dotted #81b3d2;
 }
 
-.hotel-result-link:hover {
-  color: #81b3d2;
-  border-bottom: 1px dotted #81b3d2;
-}
-
+.hotel-result-link:hover,
 .hotel-result-link:focus {
   color: #81b3d2;
-  border-bottom: none;
+  border-bottom: 1px dotted #81b3d2;
   outline: none;
 }
 
 .hotel-result-link:active {
   color: #000000;
+  border-bottom: none;
+}
+
+.hotel-result-link.current {
+  color: #81b3d2;
   border-bottom: none;
 }
 
