@@ -11,7 +11,7 @@
     <!-- Шапка сайта: навигация и логотип города -->
     <header>
       <nav class="header-nav">
-        <a class="header-logo"><img src="img/logos/logo-sedona.svg" width="140" height="71" alt="Логотип города"></a>
+        <a class="header-logo-index"><img src="img/logos/logo-sedona.svg" width="140" height="71" alt="Логотип города"></a>
         <ul class="header-nav-list">
           <li class="header-nav-item"><a href="#" class="header-nav-link">Информация</a></li>
           <li class="header-nav-item"><a href="#" class="header-nav-link">Фото и видео</a></li>
@@ -26,7 +26,7 @@
       <!-- Блок 1: Приветствие и причины-преимущества -->
       <h1 class="visually-hidden">Седона</h1>
       <div class="welcome-banner">
-        <img src="img/welcome/intro-welcome.svg" width="459" height="353" alt="Приветствие">
+        <img src="img/welcome/intro-welcome.svg" width="459" height="353" alt="Приветствие" class="welcome-img-center">
       </div>
       <section>
         <div class="welcome-block">
@@ -34,11 +34,15 @@
           <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
         </div>
         <ul class="reason-list">
-          <li class="reason-item reason-item-blue">
-            <h2>Настоящий городок</h2>
-            <p>– №1 –</p>
-            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-            <span class="reason-picture"><img src="img/content/features/feature-picture-1.jpg" width="800" height="256" alt="Фото настоящего городка"></span>
+          <li class="reason-item">
+            <div class="reason-item-container">
+              <div class="reason-item-blue">
+                <h2>Настоящий городок</h2>
+                <p>– №1 –</p>
+                <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
+              <img class="reason-picture-right" src="img/content/features/feature-picture-1.jpg" width="800" height="256" alt="Фото настоящего городка">
+            </div>
             <ul class="reason-feature-list">
               <li class="reason-feature-item reason-housing-icon">
                 <h3>Жильё</h3>
@@ -53,19 +57,21 @@
                 <p>Не только китайского, но и местного производства</p>
               </li>
             </ul>
-          <li class="reason-item reason-item-blue">
-            <span class="reason-feature-picture"><img src="img/content/features/feature-picture-2.jpg" width="800" height="256" alt="Мост дьявола"></span>
-            <h2>Там есть мост дьявола</h2>
-            <p>– №2 –</p>
-            <p>
-              Да, по нему можно пройти! Если конечно вы осмелитесь
-            </p>
+          </li>
+          <li class="reason-item">
+            <div class="reason-item-container">
+              <img class="reason-picture-left" src="img/content/features/feature-picture-2.jpg" width="800" height="256" alt="Мост дьявола">
+              <div class="reason-item-blue">
+                <h2>Там есть мост дьявола</h2>
+                <p>– №2 –</p>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
+            </div>
           </li>
           <li class="reason-item reason-item-grey">
             <h2>Небольшая площадь</h2>
             <p>– №3 –</p>
-            <p>Все достопримечательности находятся очень близко
-            </p>
+            <p>Все достопримечательности находятся очень близко</p>
           </li>
           <li class="reason-item reason-item-grey">
             <h2>Красивая дорога</h2>
@@ -85,26 +91,26 @@
         <div class="search-preconditions">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <button class="search-form-display" type="button">Поиск гостиницы в Седоне</button>
         </div>
-        <button class="search-form-button" type="button">Поиск гостиницы в Седоне</button>
-        <form class="search-form-back" action="https://echo.htmlacademy.ru" method="post">
-          <div>
+        <form class="search-form-container" action="https://echo.htmlacademy.ru" method="post">
+          <div class="search-form-arrival">
             <label class="search-form-label" for="date-arrival">Дата заезда:</label>
             <input class="search-form-date" id="date-arrival" type="text" name="date-arrival" value="" placeholder="24 апреля 2017">
             <button class="search-button-calendar" type="button" aria-label="Выбрать дату заезда"></button>
           </div>
-          <div>
+          <div class="search-form-departure">
             <label class="search-form-label" for="date-departure">Дата выезда:</label>
             <input class="search-form-date" id="date-departure" type="text" name="date-departure" value="" placeholder="4 июля 2017">
             <button class="search-button-calendar" type="button" aria-label="Выбрать дату отъезда"></button>
           </div>
-          <div>
+          <div class="search-form-adults">
             <label class="search-form-label" for="adult">Взрослые:</label>
             <button class="search-button-minus" type="button" aria-label="Уменьшить количество"></button>
             <input class="search-form-guests" id="adult" type="text" name="adult" value="" placeholder="2">
             <button class="search-button-plus" type="button" aria-label="Увеличить количество"></button>
           </div>
-          <div>
+          <div class="search-form-children">
             <label class="search-form-label" for="children">Дети:</label>
             <button class="search-button-minus" type="button" aria-label="Уменьшить количество"></button>
             <input class="search-form-guests" id="children" type="text" name="children" value="" placeholder="0">
@@ -114,19 +120,19 @@
         </form>
       </section>
 
-      <section class="map">
+      <section>
         <h2 class="visually-hidden">Карта</h2>
         <a href="#" class="map-link">
-          <img class="map-picture" src="img/content/map/map.jpg" width="1200" height="593" alt="Седона находится в США, Штат Аризона, Графство Явапай">
+          <img class="map" src="img/content/map/map.jpg" width="1200" height="593" alt="Седона находится в США, Штат Аризона, Графство Явапай">
         </a>
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1187671.550791491!2d-112.2405731685664!3d34.69230973610526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1580642350026!5m2!1sru!2sru" width="1200" height="593" style="border:0;" allowfullscreen=""></iframe> -->
+        <!-- <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1187671.550791491!2d-112.2405731685664!3d34.69230973610526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1580642350026!5m2!1sru!2sru" width="1200" height="593" style="border:0;" allowfullscreen=""></iframe> -->
       </section>
 
     </main>
 
     <!-- "Подвал" -->
-    <footer class="footer-back">
-      <div>
+    <footer class="footer-container">
+      <div class="footer-contact">
         <p class="footer-hashtag">#VisitSedona</p>
         <a class="footer-phone" href="tel:+74956660266">Тел: +7(495) 666-02-66</a>
       </div>
@@ -135,8 +141,10 @@
         <a href="https://www.facebook.com/VisitSedona" class="footer-icon-social" aria-label="Facebook" title="Facebook"></a>
         <a href="https://www.youtube.com/user/SedonaAZ1" class="footer-icon-social" aria-label="Youtube" title="Youtube"></a>
       </span>
-      <p class="footer-by-text">Website by</p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-by-logo" aria-label="HTML Academy">здесь будет лого</a>
+      <div class="footer-by">
+        <p class="footer-by-text">Website by</p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-by-logo" aria-label="HTML Academy">здесь будет лого</a>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>

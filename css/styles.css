@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -24,10 +34,16 @@ body {
   overflow: hidden;
 }
 
+.header-logo-index {
+  position: absolute;
+  top: 0;
+  left: 529px;
+}
+
 .header-logo {
   position: absolute;
   top: 0;
-  left: 569px;
+  left: 529px;
 }
 
 /* Не нашел, как должен вести себя логотип при выделении/клике. Пока сделал так */
@@ -43,24 +59,27 @@ body {
 
 /* Навигация */
 .header-nav {
-  height: 56px;
-
+  position: relative;
+  margin: auto;
+  width: 1200px;
   background-color: #ffffff;
 }
 
 .header-nav-list {
   display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .header-nav-item {
   width: 239px;
-  text-align: left;
-  vertical-align: middle;
+  height: 56px;
+  margin: auto;
+  text-align: center;
 }
 
 .header-nav-link {
-  display: block;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
@@ -85,15 +104,27 @@ body {
 
 /* Приветствие */
 .welcome-banner {
+  margin: auto;
+  padding: 0;
+  width: 1200px;
+
   background-color: #81b3d2;
   background-image:
     url("../img/welcome/intro-mask.svg"),
     url("../img/background/background-photo.jpg");
   background-size: 1200px 59px, 1200px 773px;
+  background-position: bottom center, top center;
   background-repeat: no-repeat;
 }
 
+.welcome-img-center {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
 .welcome-block {
+  margin: auto;
   width: 1200px;
   height: 216px;
 
@@ -101,6 +132,7 @@ body {
 }
 
 .welcome-block h2 {
+  margin: auto;
   width: 440px;
   height: 48px;
 
@@ -119,23 +151,38 @@ body {
 
 /* Причины */
 .reason-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: auto;
+  padding: 0;
+
   list-style: none;
 }
 
-/* возможно потом удалить совсем данный класс, как излишний. посмотреть ближе к концу*/
 .reason-item {
   text-align: center;
 }
 
 .reason-item h2 {
+  margin: 0;
+  /* временно */
+  padding-top: 50px;
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
 }
 
 .reason-item-blue {
+  width: 400px;
+  height: 256px;
+
   color: #ffffff;
   background-color: #81b3d2;
+}
+
+.reason-item-container {
+  display: flex;
 }
 
 .reason-item-grey {
@@ -146,18 +193,29 @@ body {
   background-color: #eeeeee;
 }
 
-.reason-item:nth-child(3) p,
-.reason-item:nth-child(4) p,
-.reason-item:nth-child(5) p {
+.reason-item-grey p {
   color: #333333;
+}
+
+.reason-picture-right {
+  margin-right: 0;
+}
+
+.reason-picture-left {
+  margin-left: 0;
 }
 
 /* Доп. преимущества причин */
 .reason-feature-list{
+  display: flex;
+  padding: 0;
+
   list-style: none;
 }
 
 .reason-feature-item {
+  width: 400px;
+
   background-color: #ffffff;
 }
 
@@ -172,6 +230,10 @@ body {
 .reason-feature-item p {
   text-align: center;
   color: #333333;
+}
+
+.srt1 {
+  margin-left: 73px;
 }
 
 .reason-housing-icon {
@@ -189,15 +251,27 @@ body {
   background-repeat: no-repeat;
 }
 
+
+/* .search-container {
+} */
+
 /* Предусловия формы поиска */
 .search-preconditions {
+  margin: auto;
+
   width: 1200px;
   height: 290px;
 
+  text-align: center;
   background-color: #ffffff;
 }
 
 .search-preconditions h2 {
+  /* временно */
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-top: 50px;
+
   font-size: 30px;
   font-weight: bold;
   line-height: 36px;
@@ -205,6 +279,9 @@ body {
 }
 
 .search-preconditions p {
+  /* временно */
+  margin-top: 0;
+  margin-bottom: 47px;
 
   line-height: 24px;
   text-align: center;
@@ -212,9 +289,10 @@ body {
 }
 
 /* Кнопка отображения формы поиска */
-.search-form-button {
+.search-form-display {
   width: 568px;
   height: 86px;
+  margin-bottom: 0;
 
   font-size: 21px;
   font-weight: bold;
@@ -226,19 +304,26 @@ body {
   border: none;
 }
 
-.search-form-button:hover,
-.search-form-button:focus {
+.search-form-display:hover,
+.search-form-display:focus {
   background-color: #604e43;
   outline: none;
 }
 
-.search-form-button:active {
+.search-form-display:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
 
-/* Фон формы поиска */
-.search-form-back {
+/* Форма поиска */
+.search-form-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+
   width: 568px;
   height: 395px;
 
@@ -265,6 +350,7 @@ body {
   color: #000000;
 
   background-color: #f2f2f2;
+  border: none;
 }
 
 .search-form-date:hover,
@@ -286,13 +372,15 @@ body {
 .search-form-guests {
   width: 38px;
   height: 38px;
+  padding: 0;
 
   font-size: 14px;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   color: #000000;
 
   background-color: #f2f2f2;
+  border: none;
 }
 
 .search-form-guests:hover,
@@ -307,8 +395,36 @@ body {
 
 .search-form-guests::placeholder {
   color: #000000;
+  text-align: center;
 }
 
+/* возможно позже объединить в один класс */
+.search-form-arrival {
+  margin: auto;
+  align-self: auto;
+}
+
+.search-form-departure {
+  margin: auto;
+  align-self: auto;
+}
+
+.search-form-people {
+  margin: auto;
+  align-self: auto;
+}
+
+.search-form-children {
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.search-form-adults {
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
 
 /* Иконка календаря */
 .search-button-calendar {
@@ -320,6 +436,8 @@ body {
 
 .search-button-calendar {
   fill: #cacaca;
+
+  border: none;
 }
 
 .search-button-calendar:hover,
@@ -334,10 +452,14 @@ body {
 
 /* Иконка плюса */
 .search-button-plus {
+  margin: 0;
+  padding: 0;
+
   width: 38px;
   height: 38px;
 
   fill: #cacaca;
+  border: none;
 }
 
 .search-button-plus:hover,
@@ -356,6 +478,7 @@ body {
   height: 38px;
 
   fill: #cacaca;
+  border: none;
 }
 
 .search-button-minus:hover,
@@ -372,6 +495,9 @@ body {
 .search-button {
   width: 458px;
   height: 58px;
+
+  margin-left: auto;
+  margin-right: auto;
 
   font-size: 21px;
   font-weight: bold;
@@ -395,21 +521,73 @@ body {
 }
 
 /* Карта */
-/* .map {
+.map {
+  display: flex;
+  margin: auto;
 
+  background-color: #eeeeee;
 }
 
-.map-link {
+/* .map-picture {
+  display: flex;
+  margin: auto;
+} */
 
+
+.filter-container {
+  display: flex;
+  width: 1200px;
+  min-height: 217px;
+  margin: auto;
+  background-color: #669ec0;
+  background-image: url("../img/background/background-filter.jpg");
+  background-repeat: no-repeat;
+
+  background-size: 1200px 773px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.map-picture {
+.filter-container fieldset {
+  display: flex;
+  margin: auto;
+  margin-left: 72px;
 
+  border: none;
 }
-*/
 
-.filter-back {
-  background-color: #81b3d2;
+/* .filter-price {
+  display: flex;
+  width: 314px;
+  height: 32px;
+} */
+
+
+.filter-price-from {
+  display: inline-block;
+  align-content: flex-end;
+  width: 157px;
+  height: 32px;
+  border-top: solid 2px #ffffff;
+  border-bottom: solid 2px #ffffff;
+  border-left: solid 2px #ffffff;
+  border-radius: 2px;
+}
+
+
+.filter-price-to {
+  display: inline-block;
+  width: 157px;
+  height: 32px;
+  border-top: solid 2px #ffffff;
+  border-bottom: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  border-radius: 2px;
+}
+
+.filter-price-value {
+  width: 50px;
+  margin: 0;
 }
 
 .filter-legend {
@@ -425,7 +603,6 @@ body {
 }
 
 .filter-input {
-  width: 157px;
   height: 32px;
 
   font-size: 14px;
@@ -441,6 +618,7 @@ body {
 }
 
 .filter-list {
+  padding: 0;
   list-style-type: none;
 }
 
@@ -456,8 +634,9 @@ body {
   text-transform: uppercase;
   color: #ffffff;
 
-  border: solid 2px #ffffff;
   background-color: transparent;
+  border: solid 2px #ffffff;
+  border-radius: 2px;
 }
 
 .filter-button:hover,
@@ -479,10 +658,16 @@ body {
 /* Заканчиваются стили слайдера */
 
 .hotel-result {
+  display: flex;
+  align-items: center;
+  min-height: 86px;
+  margin: auto;
+  width: 1200px;
   background-color: #ffffff;
 }
 
 .hotel-result-count {
+  padding-left: 72px;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -491,6 +676,8 @@ body {
 }
 
 .hotel-result-sort {
+  padding-left: 49px;
+  margin-right: 40px;
   font-size: 12px;
   line-height: 18px;
   text-align: left;
@@ -524,18 +711,55 @@ body {
   border-bottom: none;
 }
 
+.hotel-result-link.left {
+  margin-left: 33px;
+}
+
 /* Гостиницы */
 .hotel-list {
+  width: 1200px;
+  margin: auto;
+  padding: 0;
+  border-bottom: solid  1px #E6E6E6;
   list-style-type: none;
 }
 
 .hotel-item {
+  display: flex;
+  align-items: center;
+
+  min-height: 151px;
+  padding-left: 72px;
+
   background-color: #ffffff;
+  border-top: solid  1px #E6E6E6;
+}
+
+.hotel-item-info {
+  padding-left: 31px;
+}
+
+.hotel-item-container {
+  display: flex;
 }
 
 .hotel-list p {
+  margin: 0;
+  padding: 0;
+
   text-align: left;
   color: #333333;
+}
+
+.hotel-list .type {
+  width: 110px;
+  height: 27px;
+}
+
+.hotel-list .price {
+  width: 142px;
+  height: 27px;
+  padding-left: 6px;
 }
 
 .hotel-title {
@@ -559,7 +783,6 @@ body {
 
 /* Запрос подробностей о гостинице */
 .hotel-details {
-  display: inline-block;
   width: 110px;
   height: 27px;
 
@@ -585,9 +808,9 @@ body {
 
 /* Резервирование гостиницы */
 .hotel-reservation {
-  display: inline-block;
   width: 142px;
   height: 27px;
+  margin-left: 6px;
 
   font-weight: bold;
   /* если не будет способа сместить текст на центр, сохранив выравнивание по центру из макета, то придется обернуть <a> в <div>/<span>, перевесить класс на него, выделив часть правил в новое: ".hotel-reservation a {}"*/
@@ -609,8 +832,13 @@ body {
   background-color: #503e33;
 }
 
+/* использовать для оформления звезд */
+/* .hotel-stars {
+
+} */
+
 .hotel-ratio {
-  display: inline-block;
+  margin-left: 522px;
   width: 110px;
   height: 27px;
 
@@ -622,26 +850,31 @@ body {
 
 
 /* Подвал */
-.footer-back {
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
   width: 1200px;
   height: 120px;
 
   background-color: rgba(255, 255, 255, 0.9);
 }
 
- /* .footer-icon-block {
-
-} */
+.footer-contact {
+  margin-left: 132px;
+}
 
 /* Хэштег */
 
 .footer-hashtag {
+  /* margin: 36px 0 0 0; */
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
 }
 
 .footer-phone {
+  /* margin: 0 0 32px 0; */
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -661,13 +894,16 @@ body {
 }
 
 /* Блок иконок соц. сетей */
- /* .footer-icon-block {
-
-} */
+.footer-icon-block {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
 
 /* Иконки соц. сетей */
 .footer-icon-social {
   display: inline-flex;
+  margin: 3px;
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
@@ -684,6 +920,12 @@ body {
 .footer-icon-social:active {
   background-color: #5496bd;
   opacity: 0.3;
+}
+
+.footer-by {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
 
 /* Текст разработчика */
