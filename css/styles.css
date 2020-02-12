@@ -22,12 +22,12 @@ body {
 }
 
 .body-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: 0 auto;
-  width: 1200px;
   padding-top: 0px;
+
+  width: 1200px;
+
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .visually-hidden {
@@ -59,13 +59,13 @@ body {
   padding-right: 72px;
   padding-left: 72px;
 
-  min-height: 56px;
-
   list-style: none;
 }
 
 .header-nav-item {
-  align-self: center;
+  width: 239px;
+  height: 56px;
+  padding: 15px 0;
 }
 
 .header-nav-item:nth-child(1),
@@ -127,16 +127,6 @@ body {
 
 .header-logo:active {
   opacity: 0.5;
-}
-
-
-/* ----------------------------------------------------------- */
-/* Контейнер главной части */
-/* ----------------------------------------------------------- */
-.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 
