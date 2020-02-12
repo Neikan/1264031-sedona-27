@@ -62,6 +62,10 @@ body {
   list-style: none;
 }
 
+.header-nav-list li:nth-child(2) {
+  margin-right: auto;
+}
+
 .header-nav-item {
   width: 239px;
   height: 56px;
