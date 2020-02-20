@@ -221,8 +221,7 @@ body {
   width: 400px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: 101px;
+  justify-content: center;
 }
 
 /* Текст разработчика */
@@ -899,13 +898,12 @@ body {
   margin-top: 25px;
 }
 
-.filter-list input {
-  display: none;
+.filter-list label {
+  padding-left: 40px;
+  padding-bottom: 8px;
+  cursor: pointer;
 }
 
-.filter-list label {
-  margin-left: 40px;
-}
 
 .filter-checkbox::before {
   content: "";
@@ -949,6 +947,13 @@ body {
   background-image: url(../img/icons/checkbox-on-disabled.svg);
   background-repeat: no-repeat;
   background-size: 27px 23px;
+}
+
+.filter-list input:hover + .filter-checkbox::before,
+.filter-list input:focus + .filter-checkbox::before {
+  outline: none;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 /* Ценовой фильтр */
@@ -995,17 +1000,11 @@ body {
   border: none;
 }
 
+.filter-price-input:hover,
 .filter-price-input:focus,
 .filter-price-input:active {
   border-bottom: solid 1px #ffffff;
   border-radius: 1px;
-  outline: none;
-}
-
-.filter-price-input:hover {
-  color: #000000;
-
-  background-color: #ffffff;
   outline: none;
 }
 
