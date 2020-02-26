@@ -68,18 +68,18 @@
               <legend class="filter-legend filter-price-legend">Стоимость в сутки (р):</legend>
               <div class="filter-price">
                   <label class="filter-price-input-from">От
-                    <input class="filter-price-input" type="text" name="price-min" placeholder="0">
+                    <input class="filter-price-input" type="text" name="price-min" placeholder="0" required>
                   </label>
                   <label class="filter-price-input-to">До
-                    <input class="filter-price-input" type="text" name="price-max" placeholder="3000">
+                    <input class="filter-price-input" type="text" name="price-max" placeholder="3000" required>
                   </label>
               </div>
               <div class="filter-price-range">
                   <div class="price-range-bar-transparent">
                       <div class="price-range-bar"></div>
                   </div>
-                  <div class="price-range-toggle range-toggle-min"></div>
-                  <div class="price-range-toggle range-toggle-max"></div>
+                  <button class="price-range-toggle range-toggle-min" type="button" aria-label="Стоимость в сутки от"></button>
+                  <button class="price-range-toggle range-toggle-max" type="button" aria-label="Стоимость в сутки до"></button>
               </div>
               <button class="filter-button" type="submit">Показать</button>
             </fieldset>
@@ -93,11 +93,11 @@
             <p>Найдено: 3</p>
           </div>
           <p class="hotel-result-sort">Сортировка:</p>
-          <div>
-            <a href="#" class="hotel-result-link current">По цене</a>
-            <a href="#" class="hotel-result-link left">По типу</a>
-            <a href="#" class="hotel-result-link left">По рейтингу</a>
-          </div>
+          <ul class="hotel-result-list">
+            <li><a href="#" class="hotel-result-link current">По цене</a></li>
+            <li><a href="#" class="hotel-result-link left">По типу</a></li>
+            <li><a href="#" class="hotel-result-link left">По рейтингу</a></li>
+          </ul>
           <div class="hotel-result-sort-range">
             <a href="#" class="hotel-result-asc" aria-label="Сортировка по возрастанию" title="По возрастанию">
               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
@@ -161,7 +161,6 @@
                   <a href="#" class="hotel-reservation">Забронировать</a>
                 </div>
               </div>
-
               <div class="hotel-item-ratio">
                 <ul class ="hotel-stars">
                   <li>
