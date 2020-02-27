@@ -27,6 +27,8 @@
   var minusChildren = searchForm.querySelector('#children-minus');
   var plusChildren = searchForm.querySelector('#children-plus');
 
+  searchForm.classList.add(ClassForManipulation.HIDDEN);
+
   var openSearchForm = function () {
     searchForm.classList.remove(ClassForManipulation.HIDDEN);
     searchForm.classList.add(ClassForManipulation.SEARCH_FORM_OPEN);
