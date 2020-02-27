@@ -18,16 +18,12 @@
 
   var searchFormDisplayButton = document.querySelector('.search-form-display');
   var searchForm = document.querySelector('.search-form-container');
-  var inputDateArrival = searchForm.querySelector('#date-arrival');
-  var inputDateDeparture = searchForm.querySelector('#date-departure');
   var inputAdults = searchForm.querySelector('#adults');
   var minusAdults = searchForm.querySelector('#adults-minus');
   var plusAdults = searchForm.querySelector('#adults-plus');
   var inputChildren = searchForm.querySelector('#children');
   var minusChildren = searchForm.querySelector('#children-minus');
   var plusChildren = searchForm.querySelector('#children-plus');
-
-  searchForm.classList.add(ClassForManipulation.HIDDEN);
 
   var openSearchForm = function () {
     searchForm.classList.remove(ClassForManipulation.HIDDEN);
